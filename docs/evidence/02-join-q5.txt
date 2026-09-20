@@ -1,0 +1,12 @@
+# |order_id |customer_id|order_total|total_order_items|comment         |
+--+---------+-----------+-----------+-----------------+----------------+
+1 |ORD001929|CUS000022  |19208500.00|      19280000.00|DIFF vì discount|
+2 |ORD000471|CUS000806  |12189000.00|      12370000.00|DIFF vì discount|
+3 |ORD001040|CUS000699  |24908000.00|      26390000.00|DIFF vì discount|
+4 |ORD002907|CUS000401  |12553500.00|      13710000.00|DIFF vì discount|
+5 |ORD000126|CUS000621  |35922000.00|      37330000.00|DIFF vì discount|
+6 |ORD000544|CUS000586  |14802000.00|      15260000.00|DIFF vì discount|
+7 |ORD001715|CUS000294  |11283500.00|      11430000.00|DIFF vì discount|
+8 |ORD003603|CUS000085  | 9967500.00|      10360000.00|DIFF vì discount|
+9 |ORD002613|CUS000946  |30039500.00|      32200000.00|DIFF vì discount|
+10|ORD000888|CUS000554  |20720500.00|      21190000.00|DIFF vì discount|
