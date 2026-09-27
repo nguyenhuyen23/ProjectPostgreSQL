@@ -97,3 +97,65 @@ select o.customer_id, EXTRACT(DAY FROM (NOW() - MAX(o.order_date))) as recency_d
 where order_total is not null
 group by o.customer_id, (now() - order_date))a
 where recency_days > 0;
+
+--- 1.4 Cohort Analysis - Retention theo tháng
+
+
+with first_orders as (select customer_id, date_trunc('Month',min(order_date)) as first_order 
+					 from core.orders
+				     group by customer_id),
+cohort_month as (			  
+select b.customer_id, (Extract(year from order_date)*12 + Extract(month from order_date)) - (Extract(year from first_order)*12 + Extract(month from first_order)) as month_no,
+first_order 
+from core.orders a
+join first_orders b on a.customer_id  = b.customer_id)
+
+select first_order ,
+count(distinct case when month_no = 0 then customer_id end) as m0,
+round(count(distinct case when month_no = 1 then customer_id end) :: numeric/ count(distinct case when month_no = 0 then customer_id end):: numeric *100.0,2) as m1,
+round(count(distinct case when month_no = 2 then customer_id end) :: numeric/ count(distinct case when month_no = 0 then customer_id end):: numeric *100.0,2) as m2,
+round(count(distinct case when month_no = 3 then customer_id end) :: numeric/ count(distinct case when month_no = 0 then customer_id end):: numeric *100.0,2) as m3
+from cohort_month a
+group by first_order 
+
+
+with rfm_bucket as (
+			select customer_id,
+			EXTRACT(DAY FROM (NOW() - MAX(order_date))) as Recency,
+			COUNT(order_id) as Frequency,
+			SUM(o.order_total) as Monetary
+			from core.orders o 
+			group by customer_id),
+			
+rfm_scores as (select customer_id, Monetary, Monetary/Nullif(Frequency,0) * Frequency as aov_freq,
+		concat(CASE WHEN Recency <= 30 THEN 5
+         WHEN Recency <= 90 THEN 4
+         WHEN Recency <= 180 THEN 3
+         WHEN Recency <= 365 THEN 2
+         ELSE 1 end,         
+		   CASE WHEN frequency >= 10 THEN 5
+         WHEN frequency >= 5 THEN 4
+         WHEN frequency >= 3 THEN 3
+         WHEN frequency >= 2 THEN 2
+         ELSE 1 END,
+         CASE WHEN monetary >= 150000000 THEN 5
+         WHEN monetary >= 100000000 THEN 4
+         WHEN monetary >= 50000000 THEN 3
+         WHEN monetary >= 25000000 THEN 2
+         ELSE 1 end) as RFM
+from rfm_bucket)
+
+select * from rfm_scores
+limit 20
+
+with revenue as (
+select order_date :: date as order_date, sum(order_total) as total_rev from core.orders
+group by order_date :: date )
+
+
+select order_date, round((a.current_rev -a.previous_rev )/NULLIF(previous_rev,0) * 100.0,2) as mom_growth, 
+round(avg(a.current_rev) over(order by order_date rows between 6 preceding and current row),2) AS ma_7day,
+round(avg(a.current_rev) over(order by order_date rows between 29 preceding and current row),2) AS ma_30day
+from (
+select order_date, total_rev as current_rev, lag (total_rev)over(order by order_date) as previous_rev from revenue a
+order by order_date) a
