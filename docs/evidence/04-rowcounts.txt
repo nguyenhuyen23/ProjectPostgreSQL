@@ -1,0 +1,11 @@
+Bảng: dim_date = 1095
+Bảng: fact_sales = 12717
+Bảng: dim_customer = 1000
+Bảng: dim_product = 500
+Bảng: dim_payment_method = 4
+Bảng: dim_order_status = 5
+
+mart_revenue=65562040000
+oltp_revenue=61706432000
+diff=3855608000
+vì discount 
