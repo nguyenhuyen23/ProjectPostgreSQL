@@ -17,6 +17,10 @@ class Settings:
     reject_dir: Path = root / 'data' / 'reject'
     metadata_dir: Path = root / 'metadata'
     report_dir: Path = root / 'reports'
+    log_dir: Path = root / 'logs'
+
+    staging_dir.mkdir(parents=True, exist_ok=True)
+    log_dir.mkdir(parents=True, exist_ok=True)
 
 
 SETTINGS = Settings()
