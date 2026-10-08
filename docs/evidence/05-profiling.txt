@@ -1,0 +1,24 @@
+dataset=customers_daily, rows=100, 
+cols=['customer_id', 'full_name', 'email', 'phone', 'city', 'customer_segment', 'status', 'source_system', 'created_at', 'updated_at'], 
+missing={'customer_id': 0, 'full_name': 0, 'email': 0, 'phone': 0, 'city': 0, 'customer_segment': 0, 'status': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+
+dataset=products_daily, rows=50, 
+cols=['product_id', 'category_id', 'product_name', 'unit_price', 'cost_price', 'status', 'source_system', 'created_at', 'updated_at'], 
+missing={'product_id': 0, 'category_id': 0, 'product_name': 0, 'unit_price': 0, 'cost_price': 0, 'status': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+
+dataset=orders_daily, rows=600, 
+cols=['order_id', 'customer_id', 'order_date', 'status', 'shipping_city', 'channel', 'order_total', 'source_system', 'created_at', 'updated_at'], 
+missing={'order_id': 0, 'customer_id': 0, 'order_date': 0, 'status': 0, 'shipping_city': 0, 'channel': 0, 'order_total': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+
+dataset=order_items_daily, rows=1533, 
+cols=['order_item_id', 'order_id', 'product_id', 'quantity', 'unit_price', 'discount_amount', 'source_system', 'created_at', 'updated_at'], 
+missing={'order_item_id': 0, 'order_id': 0, 'product_id': 0, 'quantity': 0, 'unit_price': 0, 'discount_amount': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+
+dataset=payments_daily, rows=536, 
+cols=['payment_id', 'order_id', 'payment_date', 'payment_method', 'payment_status', 'amount', 'source_system', 'created_at', 'updated_at'], 
+missing={'payment_id': 0, 'order_id': 0, 'payment_date': 0, 'payment_method': 0, 'payment_status': 0, 'amount': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0

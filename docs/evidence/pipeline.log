@@ -1,0 +1,124 @@
+2026-10-07 21:34:22,682 | INFO | pipeline | Lab 5 logger OK
+2026-10-07 21:46:57,055 | INFO | pipeline | [SUCCESS] customers_daily.csv: 100 rows
+2026-10-07 21:46:57,056 | INFO | pipeline | dataset=customers_daily, rows=100, 
+cols=['customer_id', 'full_name', 'email', 'phone', 'city', 'customer_segment', 'status', 'source_system', 'created_at', 'updated_at'], 
+missing={'customer_id': 0, 'full_name': 0, 'email': 0, 'phone': 0, 'city': 0, 'customer_segment': 0, 'status': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+2026-10-07 21:46:57,057 | INFO | pipeline |   customer_id        full_name                 email      phone       city customer_segment  status source_system                created_at                updated_at
+0   CUS000001    Glenda Crosby  user0001@example.com  955750088    Can Tho             Gold  active    daily_file 2025-11-05 08:02:00+00:00 2026-07-01 01:01:00+00:00
+1   CUS000002   Andrea Bernard  user0002@example.com  918497333    Can Tho           Silver  active    daily_file 2025-01-15 01:34:00+00:00 2026-07-01 01:02:00+00:00
+2   CUS000003  Patrick Johnson  user0003@example.com  944125945      Hanoi         Platinum  active    daily_file 2025-03-12 10:29:00+00:00 2026-07-01 01:03:00+00:00
+3   CUS000004     Linda Martin  user0004@example.com  922058255  Hai Phong             Gold  active    daily_file 2025-03-22 16:35:00+00:00 2026-07-01 01:04:00+00:00
+4   CUS000005      Justin Frey  user0005@example.com  943463313    Da Nang             Gold  active    daily_file 2025-09-05 06:28:00+00:00 2026-07-01 01:05:00+00:00
+2026-10-07 21:46:57,097 | INFO | pipeline | [SUCCESS] products_daily.csv: 50 rows
+2026-10-07 21:46:57,098 | INFO | pipeline | dataset=products_daily, rows=50, 
+cols=['product_id', 'category_id', 'product_name', 'unit_price', 'cost_price', 'status', 'source_system', 'created_at', 'updated_at'], 
+missing={'product_id': 0, 'category_id': 0, 'product_name': 0, 'unit_price': 0, 'cost_price': 0, 'status': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+2026-10-07 21:46:57,098 | INFO | pipeline |   product_id category_id          product_name  unit_price  cost_price    status source_system                created_at                updated_at
+0  PRD000001      CAT018      Product 001 Note   1039500.0    700000.0    active    daily_file 2025-09-17 01:00:00+00:00 2026-07-01 01:01:00+00:00
+1  PRD000002      CAT013       Product 002 Far    178500.0    111000.0    active    daily_file 2025-08-23 01:00:00+00:00 2026-07-01 01:02:00+00:00
+2  PRD000003      CAT012  Product 003 Physical   6061000.0   4665000.0    active    daily_file 2025-06-20 01:00:00+00:00 2026-07-01 01:03:00+00:00
+3  PRD000004      CAT019    Product 004 Degree   6080000.0   3623000.0  inactive    daily_file 2025-06-07 01:00:00+00:00 2026-07-01 01:04:00+00:00
+4  PRD000005      CAT011      Product 005 Step   6468000.0   4950000.0    active    daily_file 2025-03-27 01:00:00+00:00 2026-07-01 01:05:00+00:00
+2026-10-07 21:46:57,178 | INFO | pipeline | [SUCCESS] orders_daily.csv: 600 rows
+2026-10-07 21:46:57,179 | INFO | pipeline | dataset=orders_daily, rows=600, 
+cols=['order_id', 'customer_id', 'order_date', 'status', 'shipping_city', 'channel', 'order_total', 'source_system', 'created_at', 'updated_at'], 
+missing={'order_id': 0, 'customer_id': 0, 'order_date': 0, 'status': 0, 'shipping_city': 0, 'channel': 0, 'order_total': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+2026-10-07 21:46:57,179 | INFO | pipeline |     order_id customer_id                order_date     status shipping_city     channel  order_total  source_system                created_at                updated_at
+0  ORD005001   CUS000834 2026-07-01 11:57:00+00:00  completed      Bac Ninh  mobile_app   19156500.0  ecommerce_api 2026-07-01 11:57:00+00:00 2026-07-01 13:41:00+00:00
+1  ORD005002   CUS000635 2026-07-01 13:47:00+00:00    pending          Vinh         web    7092000.0  ecommerce_api 2026-07-01 13:47:00+00:00 2026-07-01 14:22:00+00:00
+2  ORD005003   CUS000217 2026-07-01 07:44:00+00:00  completed    Quang Ninh      social   14082500.0  ecommerce_api 2026-07-01 07:44:00+00:00 2026-07-01 09:26:00+00:00
+3  ORD005004   CUS000948 2026-07-01 11:51:00+00:00  confirmed     Hai Phong      social   21671000.0  ecommerce_api 2026-07-01 11:51:00+00:00 2026-07-01 13:12:00+00:00
+4  ORD005005   CUS000522 2026-07-01 01:59:00+00:00  completed           Hue  mobile_app   13172000.0  ecommerce_api 2026-07-01 01:59:00+00:00 2026-07-01 04:10:00+00:00
+2026-10-07 21:46:57,274 | INFO | pipeline | [SUCCESS] order_items_daily.csv: 1533 rows
+2026-10-07 21:46:57,275 | INFO | pipeline | dataset=order_items_daily, rows=1533, 
+cols=['order_item_id', 'order_id', 'product_id', 'quantity', 'unit_price', 'discount_amount', 'source_system', 'created_at', 'updated_at'], 
+missing={'order_item_id': 0, 'order_id': 0, 'product_id': 0, 'quantity': 0, 'unit_price': 0, 'discount_amount': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+2026-10-07 21:46:57,275 | INFO | pipeline |   order_item_id   order_id product_id  quantity  unit_price  discount_amount  source_system                created_at                updated_at
+0   ITM00012718  ORD005001  PRD000343         1   6980000.0              0.0  ecommerce_api 2026-07-01 11:57:00+00:00 2026-07-01 11:57:00+00:00
+1   ITM00012719  ORD005001  PRD000462         1   5460000.0              0.0  ecommerce_api 2026-07-01 11:57:00+00:00 2026-07-01 11:57:00+00:00
+2   ITM00012720  ORD005001  PRD000093         1   7070000.0         353500.0  ecommerce_api 2026-07-01 11:57:00+00:00 2026-07-01 11:57:00+00:00
+3   ITM00012721  ORD005002  PRD000326         1   5750000.0         575000.0  ecommerce_api 2026-07-01 13:47:00+00:00 2026-07-01 13:47:00+00:00
+4   ITM00012722  ORD005002  PRD000012         1   2130000.0         213000.0  ecommerce_api 2026-07-01 13:47:00+00:00 2026-07-01 13:47:00+00:00
+2026-10-07 21:46:57,320 | INFO | pipeline | [SUCCESS] payments_daily.json: 536 rows
+2026-10-07 21:46:57,320 | INFO | pipeline | dataset=payments_daily, rows=536, 
+cols=['payment_id', 'order_id', 'payment_date', 'payment_method', 'payment_status', 'amount', 'source_system', 'created_at', 'updated_at'], 
+missing={'payment_id': 0, 'order_id': 0, 'payment_date': 0, 'payment_method': 0, 'payment_status': 0, 'amount': 0, 'source_system': 0, 'created_at': 0, 'updated_at': 0}, 
+duplicates=0
+2026-10-07 21:46:57,321 | INFO | pipeline |   payment_id   order_id              payment_date payment_method payment_status      amount  source_system                created_at                updated_at
+0  PAY004518  ORD005001 2026-07-01 16:35:00+00:00  bank_transfer        success  19156500.0  ecommerce_api 2026-07-01 16:35:00+00:00 2026-07-01 16:35:00+00:00
+1  PAY004519  ORD005002 2026-07-01 15:14:00+00:00           card         failed   7092000.0  ecommerce_api 2026-07-01 15:14:00+00:00 2026-07-01 15:14:00+00:00
+2  PAY004520  ORD005003 2026-07-01 08:51:00+00:00       e_wallet        success  14082500.0  ecommerce_api 2026-07-01 08:51:00+00:00 2026-07-01 08:51:00+00:00
+3  PAY004521  ORD005005 2026-07-01 02:54:00+00:00  bank_transfer        success  13172000.0  ecommerce_api 2026-07-01 02:54:00+00:00 2026-07-01 02:54:00+00:00
+4  PAY004522  ORD005006 2026-07-01 08:39:00+00:00  bank_transfer        success  15050000.0  ecommerce_api 2026-07-01 08:39:00+00:00 2026-07-01 08:39:00+00:00
+2026-10-07 21:46:57,355 | ERROR | pipeline | [ERROR] Testing.csv -> FileNotFoundError
+2026-10-07 22:04:40,100 | INFO | pipeline | pipeline started
+2026-10-07 22:04:40,100 | INFO | pipeline | start dataset=customers_daily.csv
+2026-10-07 22:04:40,123 | INFO | pipeline | profile dataset=customers_daily.csv rows=100 missing=0 duplicates=0
+2026-10-07 22:04:40,150 | ERROR | pipeline | failed dataset=customers_daily.csv
+Traceback (most recent call last):
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\src\run_file_pipeline.py", line 49, in main
+    process_one(path)
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\src\run_file_pipeline.py", line 33, in process_one
+    clean_df.to_csv(output_path, index=False)
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\core\generic.py", line 3989, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\staging'
+2026-10-07 22:07:52,319 | INFO | pipeline | pipeline started
+2026-10-07 22:07:52,319 | INFO | pipeline | start dataset=customers_daily.csv
+2026-10-07 22:07:52,343 | INFO | pipeline | profile dataset=customers_daily.csv rows=100 missing=0 duplicates=0
+2026-10-07 22:07:52,369 | ERROR | pipeline | failed dataset=customers_daily.csv
+Traceback (most recent call last):
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\src\run_file_pipeline.py", line 49, in main
+    process_one(path)
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\src\run_file_pipeline.py", line 33, in process_one
+    clean_df.to_csv(output_path, index=False)
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\util\_decorators.py", line 333, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\core\generic.py", line 3989, in to_csv
+    return DataFrameRenderer(formatter).to_csv(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\formats\format.py", line 1014, in to_csv
+    csv_formatter.save()
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\formats\csvs.py", line 251, in save
+    with get_handle(
+         ^^^^^^^^^^^
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\common.py", line 749, in get_handle
+    check_parent_directory(str(handle))
+  File "D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\.venv\Lib\site-packages\pandas\io\common.py", line 616, in check_parent_directory
+    raise OSError(rf"Cannot save file into a non-existent directory: '{parent}'")
+OSError: Cannot save file into a non-existent directory: 'D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\staging'
+2026-10-07 22:10:38,040 | INFO | pipeline | pipeline started
+2026-10-07 22:10:38,040 | INFO | pipeline | start dataset=customers_daily.csv
+2026-10-07 22:10:38,044 | INFO | pipeline | profile dataset=customers_daily.csv rows=100 missing=0 duplicates=0
+2026-10-07 22:10:38,070 | INFO | pipeline | success dataset=customers_daily.csv rows_in=100 rows_out=100 output=D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\staging\customers_daily_clean.csv
+2026-10-07 22:10:38,070 | INFO | pipeline | start dataset=products_daily.csv
+2026-10-07 22:10:38,073 | INFO | pipeline | profile dataset=products_daily.csv rows=50 missing=0 duplicates=0
+2026-10-07 22:10:38,078 | INFO | pipeline | success dataset=products_daily.csv rows_in=50 rows_out=50 output=D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\staging\products_daily_clean.csv
+2026-10-07 22:10:38,078 | INFO | pipeline | start dataset=orders_daily.csv
+2026-10-07 22:10:38,088 | INFO | pipeline | profile dataset=orders_daily.csv rows=600 missing=0 duplicates=0
+2026-10-07 22:10:38,110 | INFO | pipeline | success dataset=orders_daily.csv rows_in=600 rows_out=600 output=D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\staging\orders_daily_clean.csv
+2026-10-07 22:10:38,110 | INFO | pipeline | start dataset=order_items_daily.csv
+2026-10-07 22:10:38,122 | INFO | pipeline | profile dataset=order_items_daily.csv rows=1533 missing=0 duplicates=0
+2026-10-07 22:10:38,148 | INFO | pipeline | success dataset=order_items_daily.csv rows_in=1533 rows_out=1533 output=D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\staging\order_items_daily_clean.csv
+2026-10-07 22:10:38,149 | INFO | pipeline | start dataset=payments_daily.json
+2026-10-07 22:10:38,157 | INFO | pipeline | profile dataset=payments_daily.json rows=536 missing=0 duplicates=0
+2026-10-07 22:10:38,174 | INFO | pipeline | success dataset=payments_daily.json rows_in=536 rows_out=536 output=D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\staging\payments_daily_clean.csv
+2026-10-07 22:10:38,174 | INFO | pipeline | pipeline success

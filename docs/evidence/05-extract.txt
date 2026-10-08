@@ -1,0 +1,6 @@
+[SUCCESS] customers_daily.csv: 100 rows
+[SUCCESS] products_daily.csv: 50 rows
+[SUCCESS] orders_daily.csv: 600 rows
+[SUCCESS] order_items_daily.csv: 1533 rows
+[SUCCESS] payments_daily.json: 536 rows
+[ERROR] Testing.csv -> FileNotFoundError
