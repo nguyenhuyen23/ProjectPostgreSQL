@@ -1,0 +1,4 @@
+2026-10-12 23:24:13,905 | INFO | pipeline | resource=orders page=6 rows=600
+2026-10-12 23:24:13,911 | INFO | pipeline | Saved RAW data: D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\raw\20261012_232413\orders.json
+2026-10-12 23:25:21,367 | INFO | pipeline | resource=products page=1 rows=50
+2026-10-12 23:25:21,373 | INFO | pipeline | Saved RAW data: D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\raw\20261012_232521\products.json

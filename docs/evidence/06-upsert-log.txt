@@ -1,0 +1,4 @@
+2026-10-12 23:39:38,826 | INFO | pipeline | resource=products page=1 rows=50
+2026-10-12 23:39:38,827 | INFO | pipeline | Saved RAW data: D:\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\AI_Native_DE_Module1_Student_Pack_v3_Speaker_Notes\data\raw\20261012_233938\products.json
+Đang upsert bảng: products
+Tổng số bản ghi trong bảng products: 520

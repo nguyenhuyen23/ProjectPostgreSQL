@@ -1,0 +1,6 @@
+2026-10-12 19:28:28,600 | WARNING | pipeline | API request failed after 3/3 attempts. Reason: HTTP 404
+2026-10-12 19:40:22,208 | WARNING | pipeline | API request failed after 3/3 attempts. Reason: HTTP 404
+2026-10-12 19:42:07,167 | WARNING | pipeline | API request failed after 3/3 attempts. Reason: HTTP 401
+2026-10-12 19:43:32,176 | WARNING | pipeline | API request failed after 3/3 attempts. Reason: HTTP 401
+2026-10-12 19:44:39,996 | WARNING | pipeline | API request failed after 3/3 attempts. Reason: HTTPConnectionPool(host='localhost', port=7000): Max retries exceeded with url: /customers (Caused by NewConnectionError("HTTPConnection(host='localhost', port=7000): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+2026-10-12 19:45:39,163 | WARNING | pipeline | API request failed after 3/3 attempts. Reason: HTTP 404
