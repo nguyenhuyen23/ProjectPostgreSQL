@@ -1,0 +1,2 @@
+table: customers
+row_id=CUS000004, score=75, error=[MISSING_REQUIRED]

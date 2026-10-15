@@ -1,0 +1,6 @@
+products product_id=PRD000002 category_id=CAT999 NOT FOUND (FK_PRODUCT_NOT_FOUND)
+order_items order_item_id=ITM00012721 order_id=ORD999999 NOT FOUND (FK_ORDER_ITEM_NOT_FOUND)
+order_items order_item_id=ITM00012718 product_id=PRD000343 NOT FOUND (FK_ORDER_ITEM_NOT_FOUND)
+orders order_id=ORD005001 customer_id=CUS999999 NOT FOUND (FK_ORDER_NOT_FOUND)
+payments payment_id=PAY004518 order_id=ORD999999 NOT FOUND (FK_PAYMENT_NOT_FOUND)
+
