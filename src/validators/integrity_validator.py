@@ -3,7 +3,7 @@ import pandas as pd
 from pathlib import Path
 from sqlalchemy import create_engine, text
 
-database_url = 'postgresql+psycopg://de_user:de_password@localhost:5432/ecommerce'
+database_url = 'postgresql+psycopg://de_user:********d@localhost:5432/ecommerce'
 
 engine = create_engine(database_url, pool_pre_ping=True)
 
